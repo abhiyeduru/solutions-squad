@@ -1,246 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-    <style>
-        
-    
-    .about-us {
-        background-image: url('yoga/background.png'); 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-position: center center;
-        color: #fff; 
-    }
-    /* Move the "Healthy Lifestyle" text to the left margin */
-    
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        justify-content: center;
-        height: 100vh;
-    
-    }
-    
-    /* Heading styles */
-    h1 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    
-    h2 {
-        font-size: 24px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .about-us{
-        height: 100vh;
-        margin-top: auto;
-    
-    }
-    
-    /* Paragraph styles */
-    .container P {
-        font-size: 20px;
-        line-height: 1.5;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    
-    /* Team member styles */
-    .team-member {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .team-member img {
-        max-width: 100%;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-    
-    .team-member h3 {
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
-    
-    
-    /* Links styles */
-    a {
-        color: #007BFF;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
-    
-    .team{
-        border-radius: 30px;
-    }
-    
-    
-    /* navbar styling */
-    
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #23446b;
-        color: #fff;
-        padding: 10px 20px;
-    }
-    
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-    
-    }
-    
-    .logo img {
-        width: 80px;
-        height: 70px;
-        margin-right: 5px;
-        border-radius: 50%;
-    }
-    .footer-content {
-        text-align: center;
-        padding: 10px 0;
-        background-color: #23446b;
-        color: white;
-    }
-    
-    .footer-icons img {
-        width: 30px;
-        margin: 0 10px;
-    }
-    
-    .navbar {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    
-    
-    .nav-links {
-        list-style: none;
-        display: flex;
-    }
-    
-    .nav-links li {
-        margin-right: 20px;
-    }
-    
-    .nav-links a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-    
-    /* Media query for responsiveness */
-    @media (max-width: 768px) {
-        .navbar {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    
-        .nav-links {
-            margin-top: 10px;
-        }
-    
-        .nav-links li {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-    
-    
-    
-    
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-    
-    
-    }
-    
-    @media screen and (max-width: 768px) {
-        .container {
-            padding: 10px;
-        }
-    
-        h1 {
-            font-size: 28px;
-        }
-    
-        h2 {
-            font-size: 22px;
-    
-        }
-    }
-     
-        </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="styleabout.css">
+  <style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #001a33;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #003366;
+  }
+  
+  header .main-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+  
+  /* Team Section */
+  .team-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .team-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .team-title span {
+    color: #00ace6;
+  }
+  
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .member {
+    background-color: #00264d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 2px solid #00ace6;
+  }
+  
+  .member h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0.5rem 0;
+  }
+  
+  .member p {
+    font-size: 0.9rem;
+    color: #b3d9ff;
+  }
+  </style>
 </head>
+<body>
+  <header>
+    <h1 class="main-title">About Us</h1>
+  </header>
 
-    <body>
-        <header>
- 
-        <div class="logo">
-            <img src="yoga/logo.jpeg" alt="" /> soluctions squad
-
-        </div>
-        <div class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="login.html" >Login</a></li>
-                <li><a href="signup.html" >Sign up</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-        </div>
-</header>
-    
-    <section class="about-us">
-        <div class="container">
-            <h1>About us</h1>
-          
-    <h2>Our Team</h2>
-        
-        <div class="footer-content">
-          <div class="footer-icons">
-            <div class="email-icon">
-                <p><ion-icon name="mail-outline"> </ion-icon> Email: abhiyeduru8@gmail.com</p>
-            </div>
-           <div class="phone-icon">
-            <p><ion-icon name="call-outline"></ion-icon>Phone: 9182146476</p>
-           </div>
-          </div>
-          <p>
-            Contact us for queries
-          </p>
-          <p>&copy;  the soluctions squad </p>
-      </footer>
+  <section class="team-section">
+    <div class="team-banner">
+      <img src="" alt="Team Photo">
+    </div>
+    <h2 class="team-title">THE <span>SOLUTION SQUAD</span></h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="" alt="Member 1">
+        <h3>Aasritha Samayamanthula</h3>
+        <p><strong>Role:</strong> Founder & CEO</p>
+        <p>Responsible for setting the company's strategic direction and vision.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 2">
+        <h3>Hemavathi Saidhu</h3>
+        <p><strong>Role:</strong> Chief Technology Officer</p>
+        <p>Oversees technological direction and development.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 3">
+        <h3>Hasini Addanki</h3>
+        <p><strong>Role:</strong> Chief Information Officer</p>
+        <p>Manages the company's IT systems and strategies.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 4">
+        <h3>Sravani Munuru</h3>
+        <p><strong>Role:</strong> Chief Financial Officer</p>
+        <p>Manages financial operations and resources.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 5">
+        <h3>Abhi Yeduru</h3>
+        <p><strong>Role:</strong> Chief Cyber Officer</p>
+        <p>Oversees cybersecurity strategy and digital assets.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 6">
+        <h3>Yaswanth Jaad</h3>
+        <p><strong>Role:</strong> Chief Marketing Officer</p>
+        <p>Responsible for marketing and advertising efforts.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 7">
+        <h3>Karthik Nukala</h3>
+        <p><strong>Role:</strong> Chief Operating Officer</p>
+        <p>Oversees daily operations of the company.</p>
+      </div>
+      <div class="member">
+        <img src="" alt="Member 8">
+        <h3>prem</h3>
+        <p><strong>Role:</strong> Brand Ambassador</p>
+        <p>Represents the company's brand and values.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
-
