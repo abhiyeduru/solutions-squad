@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="yoga/logo.jpeg" alt="Solutions Squad Logo" />
+            <span>Solutions Squad</span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Sign Up</h1>
+            <form id="registration-form" onsubmit="return validateRegistration()">
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" placeholder="Enter first name" name="first-name" required>
+                    <span id="fnameWarning" class="warning">Please enter your first name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" placeholder="Enter last name" name="last-name" required>
+                    <span id="lnameWarning" class="warning">Please enter your last name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="select-campus">Select Campus *</label>
+                    <select id="select-campus" name="select-campus" required>
+                        <option value="">Select Campus</option>
+                        <option value="kiet">KIET</option>
+                        <option value="kiek">KIEK</option>
+                        <option value="kiew">KIEW</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Select student type">Select student type *</label>
+                    <select id="Select student type" name="Select student type" required>
+                        <option value="">Select student type</option>
+                        <option value="hosteler">hosteler</option>
+                        <option value="dayscholer">dayscholer</option>
+                       
+                        
+                    </select>
+                <div class="form-group">
+                    <label for="select-year">Select Year *</label>
+                    <select id="select-year" name="select-year" required>
+                        <option value="">Select Year</option>
+                        <option value="1st">B.Tech 1st Year</option>
+                        <option value="2nd">B.Tech 2nd Year</option>
+                        <option value="3rd">B.Tech 3rd Year</option>
+                        <option value="4th">B.Tech 4th Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="CSE">AI & DS</option>
+                        <option value="AI&DS">CYBER</option>
+                        <option value="CSM">MECHINE-LEARNING</option>
+                        <option value="DATA-SCINCE">DATA-SCINCE</option>
+                        <option value="CAI">ARTIFICIAL INTELLIGENCE</option>
+                        
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+                    <span id="phoneWarning" class="warning">Please enter a valid 10-digit phone number.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email-id" required>
+                    <span id="emailWarning" class="warning">Please enter a valid email address.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username" required>
+                    <span id="usernameWarning" class="warning">Please enter your username.</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <span id="passwordWarning" class="warning">Please enter a valid password with at least 6 characters.</span>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
+                    <span id="cpasswordWarning" class="warning">Passwords do not match.</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><ion-icon name="mail-outline"></ion-icon> Email: abhiyeduru8@gmail.com</p>
+                <p><ion-icon name="call-outline"></ion-icon> Phone: 9182146476</p>
+            </div>
+            <p>Contact us for queries.</p>
+            <p>&copy; Solutions Squad</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

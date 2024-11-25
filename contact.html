@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact us</title>
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* navbar styling */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.footer-content {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23446b;
+    color: white;
+}
+
+.footer-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+}
+.warning {
+    visibility: hidden;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="yoga/logo.jpeg" alt="" /> soluctions squad
+
+        </div>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="login.html" >Login</a></li>
+                <li><a href="signup.html" >Sign up</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+</header>
+    <div>
+        <div class="container">
+            <h1 style=" margin-top: 0px; border-radius: 10px; position: relative; padding-top: 0px;">Contact Us</h1>
+            <form id="contact-form" onsubmit="return validateContact()">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required  onfocusout="validateFname()">
+                    <span id="nameWarning" class="warning">Please enter a valid name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required onfocusout="validateEmail()">
+                    <span id="emailWarning" class="warning">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required onfocusout="validateSubject()">
+                    <span id="subjectWarning" class="warning">Please enter a valid subject.</span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="4" required onfocusout="validateMessage()"></textarea>
+                    <span id="mssgWarning" class="warning">Please enter a valid message.</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+    </div> 
+    <script src="contact.js"> </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-icons">
+            <div class="email-icon">
+                <p><ion-icon name="mail-outline"> </ion-icon> Email: abhiyeduru8@gmail.com</p>
+            </div>
+           <div class="phone-icon">
+            <p><ion-icon name="call-outline"></ion-icon>Phone: 9182146476</p>
+           </div>
+          </div>
+          <p>
+            Contact us for queries.
+          </p>
+          <p>&copy;  soluctions squad.</p>
+        </div>
+      </footer>
+        </body>
+        
+        </html>
